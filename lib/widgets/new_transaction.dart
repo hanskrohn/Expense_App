@@ -18,6 +18,29 @@ class _NewTransactionState extends State<NewTransaction> {
   final _amountController = TextEditingController();
   DateTime _selectedDate;
 
+  @override
+  void initState() {
+    //runs when a widgit first appears
+    //similar to useEffect
+
+    super.initState();
+  }
+
+  @override
+  void didUpdateWidget(NewTransaction oldWidget) {
+    //after widget appears, it gets called again via
+    //builder constroctur in showModalBottomSheet - main.dart
+
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void dispose() {
+    //run once the widget disappears from view
+
+    super.dispose();
+  }
+
   void _submitData() {
     if (_titleController.text.isEmpty ||
         _amountController.text.isEmpty ||
